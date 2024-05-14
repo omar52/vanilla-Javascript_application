@@ -1,3 +1,18 @@
+// adjusting the appearance of setting box
+
+// let setBox = document.querySelector(".setting-box");
+// let setIcon = document.querySelector(".toggle-icon");
+
+// setIcon.onclick = (() => setBox.classList.toggle("open"));
+
+document.querySelector(".toggle-icon").onclick = function () {
+  document.querySelector(".setting-box").classList.toggle("open");
+};
+
+// adjusting the appearance of setting box
+
+// #######################################################################################
+
 // changing the landingPage backgroungimage randomly
 
 // access the landing element.
@@ -28,3 +43,20 @@ setInterval(() => {
 }, 10000);
 
 // changing the landingPage backgroungimage randomly
+
+// ####################################################################################
+
+//changing the color dynamically
+
+let colorList = document.querySelectorAll(".colours li");
+
+colorList.forEach((li) => {
+  li.addEventListener("click", (e) => {
+    document.documentElement.style.setProperty(
+      "--main-color",
+      e.target.dataset.color
+    );
+  });
+});
+
+//changing the color dynamically

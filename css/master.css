@@ -14,7 +14,81 @@ body {
   font-variation-settings:
     "wdth" 100;
 }
+/* setting box */
+.setting-box{
+    position: fixed;
+    background-color: #fff;
+    min-height: 100vh;
+    z-index: 4;
+    width: 200px;
+    left: -200px;
+}
+.setting-box .toggle-icon{
+    position: absolute;
+    background-color: #fff;
+    right: -32px;
+    top: 100px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.setting-box.open{
+    left: 0;
+}
 
+.setting-box .setting-container{
+    padding: 24px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.setting-box .setting-container .colours ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.setting-box .setting-container .colours h2{
+    margin-bottom: 20px;
+}
+.setting-box .setting-container .colours li{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.setting-box .setting-container .colours li.active{
+    opacity: 1;
+}
+.setting-box .setting-container .colours li:first-child{
+    background-color: #FF5722;
+
+}
+.setting-box .setting-container .colours li:nth-child(2){
+    background-color: #9C27B0;
+
+}
+.setting-box .setting-container .colours li:nth-child(3){
+    background-color: #2196F3;
+
+}
+.setting-box .setting-container .colours li:nth-child(4){
+    background-color: #009688;
+
+}
+.setting-box .setting-container .colours li:last-child{
+    background-color: #8BC34A;
+
+}
+/* setting box */
 /* start langing page */
 .landing-page{
     min-height: 100vh;
@@ -79,5 +153,4 @@ body {
 .landing-page .intro-text h1 span{
 color: var(--main-color);
 }
-.landing-page .intro-text p{}
 /* end langing page */
