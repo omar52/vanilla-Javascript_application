@@ -8,7 +8,7 @@
     text-decoration: none;
 }
 body {
-    height: 5000px;
+    /* height: 5000px; */
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -229,7 +229,6 @@ color: var(--main-color);
 .about-us .info-box .image-box{
     flex: 1;
 }
-.about-us .info-box .image-box image{}
 /* ending about us section */
 /* start skills section */
 .skills{
@@ -280,3 +279,74 @@ color: var(--main-color);
 
 
 /* end skills section */
+
+
+/* adding gallery section */
+.gallery{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.gallery h2{
+    color: var(--main-color);
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+.gallery .image-box{
+    text-align: center;
+}
+.gallery .image-box img{
+    width: 200px;
+    padding: 7px;
+    background-color: #eee;
+    display: inline-block;
+    cursor: pointer;
+}
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 60%);
+    z-index: 100;
+}
+.popup-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 101;
+    /* width: 500px;
+    height: 500px; */
+    padding: 15px;
+    border: 3px solid var(--main-color);
+    background-color: #fff;
+}
+.popup-box .close-button{
+    line-height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.popup-box h3{
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: var(--main-color);
+    text-align: center;
+}
+.popup-box img{
+    max-width: 100%;
+}
+/* end gallery section */

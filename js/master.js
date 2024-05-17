@@ -182,3 +182,87 @@ if(windowScroll >= ((sectionOffTop + sectioNHeight)-(windowHeight))){
 
 }
 }
+
+// adding the popup to the gallery section
+
+let ourGallery = document.querySelectorAll(".gallery img");
+
+ourGallery.forEach((img) => {
+
+  img.addEventListener("click" , (ele) => {
+
+    //create overlay element 
+    let popupOverlay = document.createElement("div");
+    
+    //adding class of popup-overlay to the div element
+    popupOverlay.classList.add('popup-overlay');
+    
+    //adding the element to the body 
+    document.body.appendChild(popupOverlay);
+    
+    //create the popup element
+    let popup = document.createElement("div");
+    
+    //adding class popupwindow
+    popup.className="popup-box";
+    
+    // adding the heading if found
+    //adding the picture number
+    if (img.alt !== null){
+
+      //create heading element
+      let picHeading = document.createElement("h3");
+  
+      //creating the heading text
+      let headingText = document.createTextNode(img.alt);
+  
+      // adding the heading text to the header
+      picHeading.appendChild(headingText);
+  
+      //adding the heading to the popbox
+      popup.appendChild(picHeading);
+    }
+    
+    //creat the img element
+    let popupImage = document.createElement("img");
+
+    //define the src
+    popupImage.src = img.src;
+
+    // adding the image to the popupbox and popupbox to the doc
+    popup.appendChild(popupImage);
+    document.body.appendChild(popup);
+
+    //adding the close button
+    let closeButton = document.createElement("span");
+    
+    //creating textnode with x sign
+    let xSign = document.createTextNode("X");
+
+    //adding class to the span
+    closeButton.className="close-button";
+
+    //appending x sign to the span
+    closeButton.appendChild(xSign);
+
+    //appending the close button to the popup box
+    popup.appendChild(closeButton);
+
+  });
+
+})
+
+//Closing the popup
+
+document.addEventListener("click" , function(e){
+
+  if(e.target.className ==="close-button"){
+
+    e.target.parentElement.remove();
+    document.querySelector(".popup-overlay").remove();
+
+  }
+});
+
+
+// adding the popup to the gallery section
