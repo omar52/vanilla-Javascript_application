@@ -246,7 +246,8 @@ color: var(--main-color);
 .skills .skill-box{
     display: flex;
     background-color: #fff;
-    margin: 10px auto ;
+    margin: 10px auto;
+    border-radius: 20px;
 }
 .skills .skill-box .skill-name{
     height: 70px;
@@ -350,3 +351,155 @@ color: var(--main-color);
     max-width: 100%;
 }
 /* end gallery section */
+/* start timeline */
+.timeline{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #eee;
+}
+.timeline .timeline-content{
+    position: relative;
+    overflow: hidden;
+}
+.timeline .timeline-content::before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    background-color: var(--main-color);
+    margin-left: -1px;
+}
+.timeline .timeline-content .year{
+    background-color: var(--main-color);
+    width: 60px;
+    padding: 5px 10px;
+    position: relative;
+    margin: 20px auto;
+    top: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.timeline .timeline-content .left,
+.timeline .timeline-content .right{
+    width: calc(50% - 35px);
+    margin-bottom: 20px;
+    position: relative;
+}
+.timeline .timeline-content .left::before{
+    right: -44.5px;
+}
+.timeline .timeline-content .right::before{
+    left: -44.5px;
+}
+.timeline .timeline-content .left::before,
+.timeline .timeline-content .right::before{
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: 35px;
+    background-color: #fff;
+    border: 3px solid var(--main-color);
+}
+/* arrow */
+.timeline .timeline-content .left::after{
+    right: -27px;
+    border-color: transparent transparent transparent var(--main-color);
+}
+.timeline .timeline-content .right::after{
+    left: -27px;
+    border-color: transparent var(--main-color) transparent transparent;
+}
+.timeline .timeline-content .left::after,
+.timeline .timeline-content .right::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 32.5px;
+    border-width: 14px;
+    border-style: solid;
+}
+/* arrow */
+.timeline .timeline-content .left{
+    float: left;
+}
+.timeline .timeline-content .right{
+    float: right;
+}
+.timeline .timeline-content .content{
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+
+}
+.timeline .timeline-content  .content h3,
+.timeline .timeline-content  .content h3{
+    color: var(--main-color);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.timeline .timeline-content  .content p,
+.timeline .timeline-content  .content p{
+    line-height: 1.6;
+    color: rgb(130 123 123);}
+.clear-fix{
+    clear: both;
+}
+/* end timeline */
+/* start our features section */
+.features{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.features h2{
+    color: var(--main-color);
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+.features .features-content{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 80px;
+
+}
+.features .feat-box{
+    width:calc(100% / 3);
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px dotted var(--main-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+.features .feat-box img{
+    width: 90px;
+}
+.features .feat-box h3{
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    position: relative;
+}
+.features .feat-box h3::after{
+    position: absolute;
+    content: "";
+    width: calc(100% / 3);
+    height: 2px;
+    background-color: var(--main-color);
+    margin: 5px auto;
+    top: 20px;
+    left: 46px;
+}
+.features .feat-box p{
+    font-size: 14px;
+    line-height: 1.6;
+}
+/* end our features section */
